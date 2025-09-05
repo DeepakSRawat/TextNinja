@@ -190,8 +190,8 @@ export default function TextForm(props) {
         <p>
           there are {vowel} Vowels and {consonant} consonants
         </p>
-        <h2>Preview</h2>
-        <p>{text.length > 0 ? text : "Nothing to preview here!"}</p>
+        {/* <h2>Preview</h2>
+        <p>{text.length > 0 ? text : "Nothing to preview here!"}</p> */}
       </div>
     </div>
   );
