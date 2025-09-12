@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { ThemeContext } from "./context/useTheme";
-import Navbar from "./components/Navbar";
-import Alert from "./components/Alert";
+import { ThemeContext } from "../context/useTheme";
+import Navbar from "../components/Navbar";
+import Alert from "../components/Alert";
 
 export default function TextForm() {
 	const { theme } = useContext(ThemeContext);
@@ -120,7 +120,7 @@ export default function TextForm() {
 			style={{
 				color: theme === "dark" ? "white" : "#0e1a2d",
 				backgroundColor: theme === "dark" ? "#0e1a2d" : "white",
-				height: "100vh",
+				minHeight: "100vh", paddingBottom:"5rem"
 			}}
 		>
 			<Navbar />
@@ -201,7 +201,7 @@ export default function TextForm() {
 					clear
 				</button>
 			</div>
-			<div className="container my-3">
+			<div className="container my-4">
 				<h1>Your text summary</h1>
 				<p>
 					{text === "" ? 0 : wordCounter(text).word} words and{" "}

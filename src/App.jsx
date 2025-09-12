@@ -1,6 +1,6 @@
 import { useState } from "react";
-import TextForm from "./TextForm.jsx";
-import About from "./About.jsx";
+import TextForm from "./pages/TextForm.jsx";
+import About from "./pages/About.jsx";
 import {
 	BrowserRouter,
 	Routes, // instead of "Switch"
