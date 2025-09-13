@@ -1,13 +1,12 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { ThemeContext } from "../context/useTheme";
+import { ThemeContext } from "../context/themeContext/useThemeContext";
 
 export default function Navbar() {
 	const { theme, toggleTheme } = useContext(ThemeContext);
 
 	return (
-		<div>
 			<nav
 				className={`navbar navbar-expand-lg navbar-${theme} bg-${theme}`}
 			>
@@ -56,7 +55,7 @@ export default function Navbar() {
 								</label>
 
 								<input
-									onClick={toggleTheme}
+									onChange={toggleTheme}
 									className="form-check-input mx-2"
 									type="checkbox"
 									role="switch"
@@ -75,7 +74,6 @@ export default function Navbar() {
 					</div>
 				</div>
 			</nav>
-		</div>
 	);
 }
 
