@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "./context/useTheme";
-import Navbar from "./components/Navbar";
+import { ThemeContext } from "../context/themeContext/useThemeContext";
+// import Navbar from "../components/Navbar";
 
 export default function About() {
 	const { theme } = useContext(ThemeContext);
@@ -15,12 +15,12 @@ export default function About() {
 			style={{
 				color: theme === "dark" ? "white" : "#0e1a2d",
 				backgroundColor: theme === "dark" ? "#0e1a2d" : "white",
-				height: "100vh",
+				minHeight: "100vh"
 			}}
 		>
-			<Navbar />
+			{/* <Navbar /> */}
 			<div className="container">
-				<h2 className="my-2">About TextNinja</h2>
+				<h2 className="mb-2 py-2">About TextNinja</h2>
 				<p>
 					Welcome to TextNinja, where text manipulation meets
 					simplicity!
